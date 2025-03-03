@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://d1d8xetinm0ec"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_f1eej"]
+[ext_resource type="PackedScene" uid="uid://cncgq07ojsqo2" path="res://gui.tscn" id="1_w6w08"]
+[ext_resource type="PackedScene" uid="uid://qhtk25d6a6bi" path="res://Card Overlay.tscn" id="2_ptreg"]
+[ext_resource type="PackedScene" uid="uid://crx8lkq51p20s" path="res://card.tscn" id="4_ulg6f"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_f1eej")
+
+[node name="GUI" parent="." instance=ExtResource("1_w6w08")]
+
+[node name="Node2D" parent="." instance=ExtResource("2_ptreg")]
+
+[node name="Card" parent="." instance=ExtResource("4_ulg6f")]
+position = Vector2(83, 75)

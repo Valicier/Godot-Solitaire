@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://dd0he4hspl3x5"]
+
+[ext_resource type="Texture2D" uid="uid://3w6p3rni0mv5" path="res://outline.png" id="1_p6k6c"]
+[ext_resource type="Script" path="res://outline.gd" id="2_3land"]
+
+[node name="Outline" type="Sprite2D"]
+z_index = 1000
+scale = Vector2(1.615, 1.615)
+texture = ExtResource("1_p6k6c")
+offset = Vector2(37, 49)
+script = ExtResource("2_3land")
+
+[node name="TimerOff" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[node name="TimerOn" type="Timer" parent="."]
+wait_time = 0.25
+one_shot = true
+
+[connection signal="timeout" from="TimerOff" to="." method="_on_timer_off_timeout"]
+[connection signal="timeout" from="TimerOn" to="." method="_on_timer_on_timeout"]

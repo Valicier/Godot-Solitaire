@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bjhwchubji4nf"]
+
+[node name="Card Blank" type="ColorRect"]
+custom_minimum_size = Vector2(116.28, 155.04)
+offset_right = 116.28
+offset_bottom = 162.8

@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://crx8lkq51p20s"]
+
+[ext_resource type="Texture2D" uid="uid://c1w0hduotgs3l" path="res://cards.png" id="1_lacac"]
+[ext_resource type="Script" path="res://card.gd" id="2_ecv3r"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_sn8d0"]
+size = Vector2(72, 96)
+
+[node name="Card" type="Sprite2D"]
+scale = Vector2(1.615, 1.615)
+texture = ExtResource("1_lacac")
+offset = Vector2(36, 48)
+region_enabled = true
+region_rect = Rect2(1, 1, 72, 96)
+script = ExtResource("2_ecv3r")
+
+[node name="Back" type="Sprite2D" parent="." groups=["Card"]]
+texture = SubResource("PlaceholderTexture2D_sn8d0")
+offset = Vector2(36, 48)
